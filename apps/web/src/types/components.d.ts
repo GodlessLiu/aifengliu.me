@@ -11,8 +11,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BlogList: typeof import('./../components/BlogList.vue')['default']
     Home: typeof import('./../components/Home.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TagList: typeof import('./../components/TagList.vue')['default']
+    TagPostList: typeof import('./../components/TagPostList.vue')['default']
   }
 }

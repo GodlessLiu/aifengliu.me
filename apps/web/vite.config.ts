@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import { fileURLToPath, URL } from 'node:url'
+import { SITE_NAME } from '@repo/constant'
 import Tailwindcss from '@tailwindcss/vite'
 import Vue from '@vitejs/plugin-vue'
 import matter from 'gray-matter'
@@ -9,6 +10,7 @@ import Markdown from 'unplugin-vue-markdown/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 import { beasties } from 'vite-plugin-beasties'
+import { createHtmlPlugin } from 'vite-plugin-html'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig(() => {
@@ -63,6 +65,13 @@ export default defineConfig(() => {
       VueDevTools(),
       beasties(),
       Tailwindcss(),
+      createHtmlPlugin({
+        inject: {
+          data: {
+            title: SITE_NAME,
+          },
+        },
+      }),
     ],
     resolve: {
       alias: {

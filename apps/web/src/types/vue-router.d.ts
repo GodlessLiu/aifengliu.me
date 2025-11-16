@@ -37,9 +37,9 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/Blog': RouteRecordInfo<
-      '/Blog',
-      '/Blog',
+    '/posts/': RouteRecordInfo<
+      '/posts/',
+      '/posts',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -49,6 +49,27 @@ declare module 'vue-router/auto-routes' {
       '/posts/README',
       Record<never, never>,
       Record<never, never>,
+      | never
+    >,
+    '/posts/README copy': RouteRecordInfo<
+      '/posts/README copy',
+      '/posts/README copy',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/tags/': RouteRecordInfo<
+      '/tags/',
+      '/tags',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/tags/[tag]': RouteRecordInfo<
+      '/tags/[tag]',
+      '/tags/:tag',
+      { tag: ParamValue<true> },
+      { tag: ParamValue<false> },
       | never
     >,
   }
@@ -76,15 +97,33 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'contents/Blog.md': {
+    'contents/posts/index.md': {
       routes:
-        | '/Blog'
+        | '/posts/'
       views:
         | never
     }
     'contents/posts/README.md': {
       routes:
         | '/posts/README'
+      views:
+        | never
+    }
+    'contents/posts/README copy.md': {
+      routes:
+        | '/posts/README copy'
+      views:
+        | never
+    }
+    'contents/tags/index.md': {
+      routes:
+        | '/tags/'
+      views:
+        | never
+    }
+    'contents/tags/[tag].md': {
+      routes:
+        | '/tags/[tag]'
       views:
         | never
     }

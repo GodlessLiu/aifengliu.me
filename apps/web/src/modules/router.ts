@@ -8,7 +8,7 @@ export const router = createRouter({
     {
       path: '/',
       component: () => import('@/layouts/Base.layout.vue'),
-      redirect: '/blog',
+      redirect: '/posts',
       children: [...routes],
     },
   ],

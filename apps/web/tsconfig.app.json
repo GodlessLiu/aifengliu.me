@@ -14,7 +14,8 @@
   "include": [
     "src/**/*",
     "src/**/*.vue",
-    "src/types/vue-router.d.ts"
+    "src/types/vue-router.d.ts",
+    "env.d.ts"
   ],
   "exclude": [
     "node_modules"

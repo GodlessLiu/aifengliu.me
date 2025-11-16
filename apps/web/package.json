@@ -43,6 +43,7 @@
     "unplugin-vue-router": "catalog:build",
     "vite": "catalog:build",
     "vite-plugin-beasties": "catalog:build",
+    "vite-plugin-html": "catalog:build",
     "vite-plugin-vue-devtools": "catalog:build",
     "vue-tsc": "catalog:dev"
   }
