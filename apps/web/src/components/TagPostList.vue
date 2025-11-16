@@ -23,9 +23,5 @@ useTitle(() => `${SITE_NAME} | ${route.params.tag} tag`)
   <h1 class="text-2xl font-bold mb-2">
     # {{ route.params.tag }}
   </h1>
-  <div v-for="post in filteredPosts" :key="post.title">
-    <router-link :to="post.path" class="ml-0!">
-      &gt;&gt; {{ post.title }} <span class="text-xs text-gray-500 ml-4">{{ post.date }}</span>
-    </router-link>
-  </div>
+  <PostItem v-for="post in filteredPosts" :key="post.title" :post="post" />
 </template>

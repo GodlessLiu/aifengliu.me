@@ -2,4 +2,4 @@
 title: aifengliu.me | Blog
 ---
 
-<BlogList/>
+<PostList/>
