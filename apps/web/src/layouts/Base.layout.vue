@@ -1,21 +1,28 @@
+<script setup lang="ts">
+const navs = [
+  {
+    label: 'Blog',
+    to: '/posts',
+  },
+  {
+    label: 'About',
+    to: '/about',
+  },
+  {
+    label: 'Tags',
+    to: '/tags',
+  },
+]
+</script>
+
 <template>
   <div class="mx-auto">
     <header class="mb-2 px-4">
       <nav class="py-4">
         <ul class="flex">
-          <li>
-            <router-link to="/posts">
-              Blog
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/about">
-              About
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/tags">
-              Tags
+          <li v-for="nav in navs" :key="nav.to">
+            <router-link :to="nav.to" class="nav-link">
+              {{ nav.label }}
             </router-link>
           </li>
         </ul>
@@ -24,11 +31,6 @@
     <div class="mx-auto max-w-3xl mb-16 px-2">
       <router-view />
     </div>
-    <footer class="flex justify-center text-sm flex-col sm:flex-row items-center">
-      <div>
-        2025 - Present © Aifeng Liu <span class="mx-2">|</span> Learn · Share · Tech
-      </div>
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class=" after:content-['↗']">CC BY-NC-SA 4.0</a>
-    </footer>
+    <Footer />
   </div>
 </template>

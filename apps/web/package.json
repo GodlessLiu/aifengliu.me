@@ -16,15 +16,18 @@
   },
   "dependencies": {
     "@repo/constant": "workspace:*",
+    "@shikijs/markdown-it": "catalog:frontend",
+    "@sindresorhus/slugify": "catalog:frontend",
     "@unhead/vue": "catalog:frontend",
     "@vueuse/core": "catalog:frontend",
+    "markdown-it-anchor": "catalog:frontend",
     "nprogress": "catalog:frontend",
     "pinia": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend"
   },
   "devDependencies": {
-    "@repo/tailwind-config": "workspace:*",
+    "@repo/theme": "workspace:*",
     "@repo/tsconfig": "workspace:*",
     "@tailwindcss/vite": "catalog:build",
     "@tsconfig/node22": "catalog:types",

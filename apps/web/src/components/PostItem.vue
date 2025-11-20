@@ -7,25 +7,25 @@ const { post } = defineProps<{
 </script>
 
 <template>
-  <div>
-    <h2 class="text-2xl font-bold">
+  <div class="border-b border-dashed py-2">
+    <h2 class="text-2xl font-bold my-2!">
       {{ post.title }}
     </h2>
-    <div class="my-2 flex gap-1 items-center flex-wrap">
+    <div class="flex gap-1 items-center flex-wrap">
       <time class="text-sm text-gray-500 mr-2">
         Posted on {{ post.date }}
       </time>
       <div>
-        <router-link v-for="tag in post.tags" :key="tag" :to="`/tags/${tag}`" class="mx-0! mr-1!">
+        <router-link v-for="tag in post.tags" :key="tag" :to="`/tags/${tag}`" class="nav-link mx-1!">
           #{{ tag }}
         </router-link>
       </div>
     </div>
-    <p class="mb-1">
+    <p class="mb-1! mt-1!">
       {{ post.description }}
     </p>
     <div class="text-right">
-      <router-link :to="post.path" class="text-xs">
+      <router-link :to="post.path" class="text-xs nav-link">
         READ MORE →
       </router-link>
     </div>

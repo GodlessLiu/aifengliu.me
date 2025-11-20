@@ -1,1 +1,4 @@
+---
+display: false
+---
 <TagPostList />

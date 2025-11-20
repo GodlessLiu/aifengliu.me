@@ -3,7 +3,7 @@
   "prettier.enable": false,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  
+
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
@@ -85,5 +85,8 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  }
 }

@@ -13,6 +13,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BlogItem: typeof import('./../components/BlogItem.vue')['default']
     BlogList: typeof import('./../components/BlogList.vue')['default']
+    Footer: typeof import('./../components/Footer.vue')['default']
     Home: typeof import('./../components/Home.vue')['default']
     PostItem: typeof import('./../components/PostItem.vue')['default']
     PostList: typeof import('./../components/PostList.vue')['default']
@@ -20,5 +21,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TagList: typeof import('./../components/TagList.vue')['default']
     TagPostList: typeof import('./../components/TagPostList.vue')['default']
+    WrapperPost: typeof import('./../components/WrapperPost.vue')['default']
   }
 }

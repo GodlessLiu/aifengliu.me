@@ -3,7 +3,7 @@ const router = useRouter()
 
 const tags = router.getRoutes().filter(route => (route.path.startsWith('/posts/'))).reduce((acc, route) => {
   route.meta.frontmatter?.tags?.forEach((tag) => {
-    acc.add(tag)
+    acc.add(tag.toUpperCase())
   })
   return acc
 }, new Set<string>())
@@ -11,12 +11,12 @@ const tags = router.getRoutes().filter(route => (route.path.startsWith('/posts/'
 
 <template>
   <div>
-    <h1 class="text-2xl font-bold mb-2">
+    <h1 class="text-2xl font-bold">
       Tags
     </h1>
     <div class="flex gap-2 flex-wrap">
       <div v-for="tag in Array.from(tags)" :key="tag">
-        <router-link :to="`/tags/${tag}`" class="mx-0! mr-1!">
+        <router-link :to="`/tags/${tag}`" class="nav-link mx-0!">
           #{{ tag }}
         </router-link>
       </div>

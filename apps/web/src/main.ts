@@ -1,7 +1,7 @@
 import type { UserModule } from './types'
 import { createApp } from 'vue'
 import App from './App.vue'
-import '@repo/tailwind-config'
+import '@repo/theme'
 
 const app = createApp(App)
 

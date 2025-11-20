@@ -1,9 +1,12 @@
 import fs from 'node:fs'
 import { fileURLToPath, URL } from 'node:url'
 import { SITE_NAME } from '@repo/constant'
+import Shiki from '@shikijs/markdown-it'
+import slugify from '@sindresorhus/slugify'
 import Tailwindcss from '@tailwindcss/vite'
 import Vue from '@vitejs/plugin-vue'
 import matter from 'gray-matter'
+import anchor from 'markdown-it-anchor'
 import AutoImport from 'unplugin-auto-import/vite'
 import AutoComponents from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
@@ -39,8 +42,28 @@ export default defineConfig(() => {
         include: [/\.vue$/, /\.md$/],
       }),
       Markdown({
+        wrapperComponent: 'WrapperPost',
         include: [`${contentsPath}/**/*.md`],
         headEnabled: true,
+        wrapperClasses: 'prose',
+        exportFrontmatter: false,
+        exposeFrontmatter: false,
+        exposeExcerpt: false,
+        async markdownItSetup(md) {
+          md.use(await Shiki({
+            themes: {
+              light: 'vitesse-light',
+            },
+          }))
+
+          md.use(anchor, {
+            slugify,
+            permalink: anchor.permalink.linkInsideHeader({
+              symbol: '#',
+              renderAttrs: () => ({ 'aria-hidden': 'true' }),
+            }),
+          })
+        },
       }),
       AutoImport({
         imports: [

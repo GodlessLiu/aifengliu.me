@@ -51,9 +51,9 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/posts/README copy': RouteRecordInfo<
-      '/posts/README copy',
-      '/posts/README copy',
+    '/posts/README1': RouteRecordInfo<
+      '/posts/README1',
+      '/posts/README1',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -109,9 +109,9 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'contents/posts/README copy.md': {
+    'contents/posts/README1.md': {
       routes:
-        | '/posts/README copy'
+        | '/posts/README1'
       views:
         | never
     }
