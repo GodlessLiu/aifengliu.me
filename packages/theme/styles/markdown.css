@@ -316,10 +316,6 @@ h6:focus .header-anchor {
   content: '-';
 }
 
-.prose a::after {
-  content: '↗';
-}
-
 /* Highlight lines (transformerNotationHighlight) */
 .prose .shiki.has-highlighted .line:not(.highlighted) {
   opacity: 0.55;
