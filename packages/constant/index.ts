@@ -1,1 +1,1 @@
-export const SITE_NAME = 'aifengliu.me'
+export const SITE_NAME = 'Hilary Liu'
