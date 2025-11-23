@@ -17,7 +17,7 @@ const navs = [
 
 <template>
   <div class="mx-auto">
-    <header class="mb-2 px-4">
+    <header class="mb-2 px-4 flex items-center justify-between">
       <nav class="py-4">
         <ul class="flex">
           <li v-for="nav in navs" :key="nav.to">
@@ -27,6 +27,7 @@ const navs = [
           </li>
         </ul>
       </nav>
+      <ToggleTheme />
     </header>
     <div class="mx-auto max-w-3xl mb-16 px-2">
       <router-view />

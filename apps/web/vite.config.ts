@@ -51,7 +51,10 @@ export default defineConfig(() => {
         exposeExcerpt: false,
         async markdownItSetup(md) {
           md.use(await Shiki({
-            theme: 'vitesse-light',
+            themes: {
+              light: 'vitesse-light',
+              dark: 'vitesse-dark',
+            },
             transformers: [
               transformerNotationDiff(),
               transformerNotationFocus(),
